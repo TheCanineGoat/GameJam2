@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://sfojnhakeld5"]
+
+[ext_resource type="Script" uid="uid://ocjtn5h7mpxq" path="res://player_controller.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cu5glesidtteb" path="res://icon.svg" id="2_i3pqv"]
+[ext_resource type="Script" uid="uid://bt5y31jc6l3t1" path="res://camera_controller.gd" id="3_i3pqv"]
+[ext_resource type="Script" uid="uid://bcqqecua4lbix" path="res://hurtbox.gd" id="4_2hs0m"]
+[ext_resource type="Script" uid="uid://ckhp7ml41joch" path="res://health_component.gd" id="4_sweqy"]
+[ext_resource type="Script" uid="uid://pmptn3kulmbm" path="res://damage_vignette.gd" id="5_2hs0m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
+size = Vector2(48, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jxqw"]
+size = Vector2(51, 87)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_onrkg")
+move_speed = 400.0
+ground_friction = 17000.0
+jump_strength = 620.0
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-24, 49.5)
+scale = Vector2(0.390625, 0.6640625)
+texture = ExtResource("2_i3pqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-25, 49.5)
+shape = SubResource("RectangleShape2D_hqtel")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("3_i3pqv")
+shake_decay = 2.0
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_mask = 0
+script = ExtResource("4_2hs0m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(-24.5, 49.5)
+shape = SubResource("RectangleShape2D_1jxqw")
+
+[node name="HealthComponent" type="CanvasLayer" parent="."]
+script = ExtResource("4_sweqy")
+
+[node name="DamageVignette" type="CanvasLayer" parent="." node_paths=PackedStringArray("health_component")]
+script = ExtResource("5_2hs0m")
+health_component = NodePath("../HealthComponent")

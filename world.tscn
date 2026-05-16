@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5sxjianekrey"]
+
+[ext_resource type="PackedScene" uid="uid://btk603c6jy0ji" path="res://spawn_point.tscn" id="1_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://sfojnhakeld5" path="res://player.tscn" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://ck6lcmowdmos3" path="res://testWorld.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://csiyhgammxgbd" path="res://door.tscn" id="4_aqk2v"]
+
+[node name="world" type="Node2D"]
+
+[node name="SpawnPoint" parent="." instance=ExtResource("1_tlwt5")]
+
+[node name="Node2D" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(113, 59)
+player_scene = ExtResource("2_tlwt5")
+
+[node name="door" parent="." instance=ExtResource("4_aqk2v")]
+position = Vector2(330, 382)

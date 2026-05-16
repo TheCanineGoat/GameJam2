@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://csiyhgammxgbd"]
+
+[ext_resource type="Script" uid="uid://ol5dgrnfj3by" path="res://level_trigger.gd" id="1_v6xrn"]
+[ext_resource type="Texture2D" uid="uid://cu5glesidtteb" path="res://icon.svg" id="2_0phs7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50cdl"]
+size = Vector2(70, 123)
+
+[node name="door" type="Area2D"]
+script = ExtResource("1_v6xrn")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(0.5546875, 1)
+texture = ExtResource("2_0phs7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_50cdl")
