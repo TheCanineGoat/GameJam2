@@ -21,7 +21,7 @@ LevelManager="*res://level_manager.gd"
 
 [global_group]
 
-player=""
+Player=""
 
 [input]
 
