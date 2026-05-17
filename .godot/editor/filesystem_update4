@@ -1,9 +1,1 @@
-res://door.tscn
-res://level_trigger.gd
-res://world.tscn
-res://level_manager.gd
-res://next_level.tscn
 res://player.tscn
-res://levels/world_1.tscn
-res://levels/level_1.tscn
-res://levels/world_2.tscn
