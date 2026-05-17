@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2kfhd8tsyo4e"]
+
+[ext_resource type="Script" uid="uid://buujti5sholre" path="res://shaders/atmosphere.gd" id="1_jf0hv"]
+[ext_resource type="Shader" uid="uid://cfg06d7l78bri" path="res://shaders/silksong_atmosphere.gdshader" id="2_dexd8"]
+
+[node name="Atmosphere_shader" type="CanvasLayer"]
+layer = 8
+script = ExtResource("1_jf0hv")
+atmosphere_shader = ExtResource("2_dexd8")

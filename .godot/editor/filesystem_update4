@@ -1,1 +1,6 @@
 res://player.tscn
+res://next_level.tscn
+res://levels/world_1.tscn
+res://shaders/silksong_player.gdshader
+res://addons/light_shape_2d/baked_lights/light_9349909017489.res
+res://shaders/silksong_atmosphere.gdshader
