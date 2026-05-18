@@ -16,6 +16,11 @@ extends CharacterBody2D
 #
 # ================================================================
 
+#Onready
+@onready var  Run = $Icon
+@onready var  Run2 =$AnimationPlayer
+@onready var  Idle2 = $AnimationPlayer
+@onready var  Idle1= $Icon
 
 # ────────────────────────────────────────────────────────────────
 #  EXPORTED TUNING VARIABLES
@@ -197,9 +202,13 @@ func _apply_movement(delta: float, on_floor: bool) -> void:
 		_facing_dir = dir
 		var accel := ground_accel if on_floor else air_accel
 		velocity.x = move_toward(velocity.x, dir * move_speed, accel * delta)
+		Run.play("Run")
+		Run2.play("Run")
 	else:
 		var fric := ground_friction if on_floor else air_friction
 		velocity.x = move_toward(velocity.x, 0.0, fric * delta)
+		Idle1.play("idle")
+		Idle2.play("Idle")
 
 
 # ────────────────────────────────────────────────────────────────
