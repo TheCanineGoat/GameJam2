@@ -239,6 +239,7 @@ func _handle_jump(on_floor: bool) -> void:
 
 func _do_jump(strength: float) -> void:
 	velocity.y   = -strength
+	Idle1.play("Jump")
 	_jump_held   = true
 
 

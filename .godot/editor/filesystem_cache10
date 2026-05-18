@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779117192
+::res://::1779119930
 atmosphere_shader.tscn::PackedScene::9075320901804825622::1779033429::0::1::::<><><>0<>0<><>::uid://buujti5sholre::::res://shaders/atmosphere.gd<>uid://cfg06d7l78bri::::res://shaders/silksong_atmosphere.gdshader
 camera_controller.gd::GDScript::3783448635136347992::1778850156::0::1::::<>Camera2D<><>0<>0<><>::
 damage_vignette.gd::GDScript::1078550599134495798::1778853852::0::1::::DamageVignette<>CanvasLayer<><>0<>0<><>::
@@ -12,8 +12,8 @@ level_manager.gd::GDScript::3400101510780089441::1778960843::0::1::::<>RefCounte
 level_manager.tscn::PackedScene::6850048290865791885::1778864972::0::1::::<><><>0<>0<><>::uid://bopbf7o8fvejh::::res://level_manager.gd<>uid://sfojnhakeld5::::res://player.tscn
 level_trigger.gd::GDScript::1007179175391323810::1778962663::0::1::::<>Area2D<><>0<>0<><>::
 next_level.tscn::PackedScene::6054225598989265589::1779033522::0::1::::<><><>0<>0<><>::uid://ol5dgrnfj3by::::res://level_trigger.gd<>uid://cu5glesidtteb::::res://icon.svg
-player.tscn::PackedScene::1274587877929472560::1779117190::0::1::::<><><>0<>0<><>::uid://ocjtn5h7mpxq::::res://player_controller.gd<>uid://ocv7wmh7tf2f::::res://Art/Player_art/Sprite_idle.png<>uid://bt5y31jc6l3t1::::res://camera_controller.gd<>uid://bcqqecua4lbix::::res://hurtbox.gd<>uid://ckhp7ml41joch::::res://health_component.gd<>uid://pmptn3kulmbm::::res://damage_vignette.gd<>uid://b85ce60eub0pq::::res://addons/light_shape_2d/point_light_shape_2d.gd
-player_controller.gd::GDScript::987353678968648986::1778848412::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::1274587877929472560::1779118568::0::1::::<><><>0<>0<><>::uid://ocjtn5h7mpxq::::res://player_controller.gd<>uid://ocv7wmh7tf2f::::res://Art/Player_art/Sprite_idle.png<>uid://b6cng7j4vygnt::::res://Art/Player_art/Sprite_movement.png<>uid://bt5y31jc6l3t1::::res://camera_controller.gd<>uid://bcqqecua4lbix::::res://hurtbox.gd<>uid://ckhp7ml41joch::::res://health_component.gd<>uid://pmptn3kulmbm::::res://damage_vignette.gd<>uid://b85ce60eub0pq::::res://addons/light_shape_2d/point_light_shape_2d.gd
+player_controller.gd::GDScript::987353678968648986::1779119930::0::1::::<>CharacterBody2D<><>0<>0<><>::
 README.md::TextFile::-1::1778958776::0::1::::<><><>0<>0<><>::
 spawn_point.tscn::PackedScene::3742580837144607438::1778863942::0::1::::<><><>0<>0<><>::
 test block.tscn::PackedScene::8963034512268525173::1778849156::0::1::::<><><>0<>0<><>::uid://cu5glesidtteb::::res://icon.svg
@@ -28,8 +28,9 @@ point_light_shape_2d.gd::GDScript::4764714100583617530::1779034492::0::1::::Poin
 ::res://addons/light_shape_2d/baked_lights/::1779034809
 light_9349909017489.res::ImageTexture::9207667449775553009::1779034809::0::1::::<><><>0<>0<><>::
 ::res://Art/::1779117145
-::res://Art/Player_art/::1779117190
+::res://Art/Player_art/::1779120550
 Sprite_idle.png::CompressedTexture2D::988105943106545703::1779020172::1779117193::1::::<><><>0<>0<>c293efaeb091247a7c388bfb05221971<>res://.godot/imported/Sprite_idle.png-a925ea3559662666125c22964eba86c2.ctex::
+Sprite_Jump.png::CompressedTexture2D::4922514923331530272::1779120519::1779120606::1::::<><><>0<>0<>3911372d392e4e380af144f935996c49<>res://.godot/imported/Sprite_Jump.png-4a4cb24e73afafc358688e469e658298.ctex::
 Sprite_movement.png::CompressedTexture2D::4567205323646703317::1779117026::1779117193::1::::<><><>0<>0<>b9a98c9ca289e679e561d6977b71d2e5<>res://.godot/imported/Sprite_movement.png-f434065bea5633a631f81c7f79cc18ce.ctex::
 ::res://levels/::1779033539
 level_1.tscn::PackedScene::7541333324600520819::1778962135::0::1::::<><><>0<>0<><>::
