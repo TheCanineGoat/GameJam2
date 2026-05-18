@@ -73,6 +73,10 @@ var fall_gravity_multiplier        : float = 1.70
 @export var jump_buffer_time  : float = 0.13
 
 
+#Jump animation
+var _is_jump_animating: bool = false
+
+
 # ────────────────────────────────────────────────────────────────
 #  INTERNAL STATE
 # ────────────────────────────────────────────────────────────────
@@ -105,6 +109,9 @@ var _facing_dir         : float = 1.0
 # ────────────────────────────────────────────────────────────────
 #  PHYSICS PROCESS  (main loop)
 # ────────────────────────────────────────────────────────────────
+
+func _ready()-> void:
+	Sprite.animation_finished.connect(_on_jump_anim_finished)
 
 func _physics_process(delta: float) -> void:
 	var on_floor := is_on_floor()
@@ -190,6 +197,11 @@ func _apply_gravity(delta: float, on_floor: bool) -> void:
 	elif _jump_held and not Input.is_action_pressed("ui_accept") and velocity.y < 0.0:
 		# Jump-cut: player released jump early → cut upward velocity sharply
 		velocity.y *= jump_cut_multiplier
+		
+		
+		
+		
+		
 		_jump_held = false
 
 	velocity.y = minf(velocity.y + grav * delta, max_fall_speed)
@@ -206,13 +218,15 @@ func _apply_movement(delta: float, on_floor: bool) -> void:
 		_facing_dir = dir
 		var accel := ground_accel if on_floor else air_accel
 		velocity.x = move_toward(velocity.x, dir * move_speed, accel * delta)
-		Run.play("Run")
-		Run2.play("Run")
+		if on_floor and not _is_jump_animating:
+			Run.play("Run")
+			Run2.play("Run")
 	else:
 		var fric := ground_friction if on_floor else air_friction
 		velocity.x = move_toward(velocity.x, 0.0, fric * delta)
-		Idle1.play("idle")
-		Idle2.play("Idle")
+		if on_floor and not _is_jump_animating:
+			Sprite.play("idle")
+			Idle2.play("Idle")
 
 
 # ────────────────────────────────────────────────────────────────
@@ -229,7 +243,7 @@ func _handle_jump(on_floor: bool) -> void:
 		# ── Normal jump (or coyote jump) ───────────────────────
 		_do_jump(jump_strength)
 		_jump_buffer_timer = 0.0
-		_coyote_timer      = 0.0
+		_coyote_timer = 0.0
 
 	elif _can_double_jump:
 		# ── Double jump (air) ──────────────────────────────────
@@ -239,14 +253,17 @@ func _handle_jump(on_floor: bool) -> void:
 
 func _do_jump(strength: float) -> void:
 	velocity.y   = -strength
-	Idle1.play("Jump")
 	_jump_held   = true
+	_is_jump_animating = true
+	Sprite.play("Jump")
 
 
 func _do_double_jump() -> void:
 	velocity.y      = -double_jump_strength
 	_can_double_jump = false
+	_is_jump_animating = true
 	_jump_held       = true
+	Sprite.play("Jump")
 
 
 # ────────────────────────────────────────────────────────────────
@@ -317,3 +334,8 @@ func player_flip(delta: float)-> void:
 		Sprite.flip_h = false
 	else:
 		Sprite.flip_h = true
+
+
+func _on_jump_anim_finished() -> void:
+	if Sprite.animation == "Jump":
+		_is_jump_animating=false

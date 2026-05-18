@@ -1,4 +1,4 @@
+res://player_controller.gd
 res://player.tscn
 res://shaders/silksong_atmosphere.gdshader
 res://shaders/silksong_player.gdshader
-res://player_controller.gd
