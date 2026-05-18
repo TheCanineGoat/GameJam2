@@ -21,6 +21,7 @@ extends CharacterBody2D
 @onready var  Run2 =$AnimationPlayer
 @onready var  Idle2 = $AnimationPlayer
 @onready var  Idle1= $Icon
+@onready var  Sprite = $Icon
 
 # ────────────────────────────────────────────────────────────────
 #  EXPORTED TUNING VARIABLES
@@ -117,6 +118,9 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		_was_on_floor = on_floor
 		return
+	
+	
+	player_flip(_facing_dir)
 
 	# ── 3. Gravity ───────────────────────────────────────────────
 	_apply_gravity(delta, on_floor)
@@ -306,3 +310,9 @@ func freeze_movement() -> void:
 ## Re-enable after freeze_movement()
 func unfreeze_movement() -> void:
 	set_physics_process(true)
+func player_flip(delta: float)-> void:
+	
+	if delta ==1:
+		Sprite.flip_h = false
+	else:
+		Sprite.flip_h = true
