@@ -1,4 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
+<<<<<<< Updated upstream
 ::res://::1779190939
 actual_platform.tscn::PackedScene::2881647662778120700::1779190748::0::1::::<><><>0<>0<><>::uid://baj864y3d3n0r::::res://Art/Game-Asset-Art-Carol-Salvato/Game-Asset-Carol-Salvato/tile-set-ground-earth-rock-grass.png<>uid://wr40naffpruk::::res://Art/Game-Asset-Art-Carol-Salvato/Game-Asset-Carol-Salvato/tile-set-ground-earth-rock-sombra.png<>uid://gn0vq4qwycye::::res://Art/Game-Asset-Art-Carol-Salvato/Game-Asset-Carol-Salvato/tile-set-ground-earth-rock.png<>uid://bcalvcb6vs37d::::res://Art/Game-Asset-Art-Carol-Salvato/Game-Asset-Carol-Salvato/tileset-cave-01.png
 atmosphere_shader.tscn::PackedScene::9075320901804825622::1779190749::0::1::::<><><>0<>0<><>::uid://buujti5sholre::::res://shaders/atmosphere.gd<>uid://cfg06d7l78bri::::res://shaders/silksong_atmosphere.gdshader
@@ -92,3 +93,26 @@ world_2.tscn::PackedScene::7780691810929029477::1779190749::0::1::::<><><>0<>0<>
 atmosphere.gd::GDScript::3832065961912724626::1779190750::0::1::::<>CanvasLayer<><>0<>0<><>::
 silksong_atmosphere.gdshader::Shader::5137745344078578998::1779190750::0::1::::<><><>0<>0<><>::
 silksong_player.gdshader::Shader::5035146779920530155::1779190750::0::1::::<><><>0<>0<><>::
+=======
+::res://::1778959082
+camera_controller.gd::GDScript::3783448635136347992::1778850156::0::1::::<>Camera2D<><>0<>0<><>::
+damage_vignette.gd::GDScript::1078550599134495798::1778853852::0::1::::DamageVignette<>CanvasLayer<><>0<>0<><>::
+door.tscn::PackedScene::6054225598989265589::1778864166::0::1::::<><><>0<>0<><>::uid://ol5dgrnfj3by::::res://level_trigger.gd<>uid://cu5glesidtteb::::res://icon.svg
+health_component.gd::GDScript::5490148996967190347::1778853852::0::1::::HealthComponent<>Node<><>0<>0<><>::
+hitbox.gd::GDScript::3045956219407421572::1778851958::0::1::::HitBox<>Area2D<><>0<>0<><>::
+hitbox.tscn::PackedScene::6135594394140819283::1778853164::0::1::::<><><>0<>0<><>::uid://bjnqpoyvpapyi::::res://hitbox.gd<>uid://cu5glesidtteb::::res://icon.svg
+hurtbox.gd::GDScript::2560807166075981395::1778852884::0::1::::HurtBox<>Area2D<><>0<>0<><>::
+icon.svg::CompressedTexture2D::6238933756726337053::1778847174::1778959083::1::::<><><>0<>0<>7a247fee47e9193791f7beaad0a7f889<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+level_manager.gd::GDScript::3400101510780089441::1778860238::0::1::::<>Node<><>0<>0<><>::
+level_manager.tscn::PackedScene::6850048290865791885::1778864972::0::1::::<><><>0<>0<><>::uid://bopbf7o8fvejh::::res://level_manager.gd<>uid://sfojnhakeld5::::res://player.tscn
+level_trigger.gd::GDScript::1007179175391323810::1778864456::0::1::::LevelTrigger<>Area2D<><>0<>0<><>::
+player.tscn::PackedScene::1274587877929472560::1778863744::0::1::::<><><>0<>0<><>::uid://ocjtn5h7mpxq::::res://player_controller.gd<>uid://cu5glesidtteb::::res://icon.svg<>uid://bt5y31jc6l3t1::::res://camera_controller.gd<>uid://bcqqecua4lbix::::res://hurtbox.gd<>uid://ckhp7ml41joch::::res://health_component.gd<>uid://pmptn3kulmbm::::res://damage_vignette.gd
+player_controller.gd::GDScript::987353678968648986::1778848412::0::1::::<>CharacterBody2D<><>0<>0<><>::
+README.md::TextFile::-1::1778958776::0::1::::<><><>0<>0<><>::
+spawn_point.tscn::PackedScene::3742580837144607438::1778863942::0::1::::<><><>0<>0<><>::
+test block.tscn::PackedScene::8963034512268525173::1778849156::0::1::::<><><>0<>0<><>::uid://cu5glesidtteb::::res://icon.svg
+testWorld.tscn::PackedScene::5539397625562160264::1778854348::0::1::::<><><>0<>0<><>::uid://djdq2ythvj1fn::::res://test_level.gd
+test_level.gd::GDScript::7798175755661651927::1778850366::0::1::::<>Node2D<><>0<>0<><>::
+test_level_2.tscn::PackedScene::3938606904149508509::1778860968::0::1::::<><><>0<>0<><>::
+world.tscn::PackedScene::6917078459862242196::1778864190::0::1::::<><><>0<>0<><>::uid://btk603c6jy0ji::::res://spawn_point.tscn<>uid://sfojnhakeld5::::res://player.tscn<>uid://ck6lcmowdmos3::::res://testWorld.tscn<>uid://csiyhgammxgbd::::res://door.tscn
+>>>>>>> Stashed changes
