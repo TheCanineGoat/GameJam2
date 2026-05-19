@@ -1,3 +1,11 @@
 res://levels/level_1.tscn
 res://shaders/silksong_atmosphere.gdshader
 res://shaders/silksong_player.gdshader
+res://levels/area_2d.gd
+res://player.tscn
+res://levels/world_1.tscn
+res://health_component.gd
+res://hitbox.tscn
+res://coin.tscn
+res://hitbox.gd
+res://actual_platform.tscn

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5sxjianekrey"]
+[gd_scene load_steps=6 format=3 uid="uid://c5sxjianekrey"]
 
 [ext_resource type="PackedScene" uid="uid://ck6lcmowdmos3" path="res://testWorld.tscn" id="2_7ab5j"]
 [ext_resource type="PackedScene" uid="uid://sfojnhakeld5" path="res://player.tscn" id="3_1asa0"]
 [ext_resource type="PackedScene" uid="uid://d2kfhd8tsyo4e" path="res://atmosphere_shader.tscn" id="4_3hl4r"]
 [ext_resource type="PackedScene" uid="uid://csiyhgammxgbd" path="res://next_level.tscn" id="4_n5ceu"]
+[ext_resource type="PackedScene" uid="uid://ctoelw2disp8f" path="res://hitbox.tscn" id="5_7ab5j"]
 
 [node name="world_1" type="Node2D"]
 
@@ -15,3 +16,12 @@ player_scene = ExtResource("3_1asa0")
 position = Vector2(448, 750)
 
 [node name="Atmosphere_shader" parent="." instance=ExtResource("4_3hl4r")]
+
+[node name="Hitbox" parent="." instance=ExtResource("5_7ab5j")]
+position = Vector2(638, 495)
+damage = 1000.0
+
+[node name="CollisionShape2D" parent="Hitbox" index="1"]
+scale = Vector2(0.10937501, 0.12695313)
+
+[editable path="Hitbox"]

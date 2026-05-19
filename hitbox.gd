@@ -14,6 +14,7 @@ class_name HitBox
 #  Set collision mask   to the RECEIVER's layer  (e.g. layer 1 = player)
 # ================================================================
 
+@onready var LevelAnimationPlayer = $"../LevelAnimationPlayer"
 @export_group("⚔️ Hit Settings")
 
 ## Toggle the entire hitbox on / off at runtime
@@ -68,6 +69,7 @@ func _on_area_entered(area: Area2D) -> void:
 	var hurtbox := area as HurtBox
 	if not hurtbox.active:
 		return
+	LevelAnimationPlayer.play("RESET")
 
 	# Pass damage + knockback to the hurtbox
 	hurtbox.receive_hit(damage, knockback_force, self)
